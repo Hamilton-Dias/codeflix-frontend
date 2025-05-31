@@ -5,7 +5,14 @@ export default function Home() {
     <div className='relative h-full lg:h-[140vh]'>
       <main className='relative pb-24 pl-4 lg:space-y-24 lg:pl-16'>
         <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'>
-          <div className='absolute top-0 left-0 -z-10 flex h-[95vh] w-screen flex-col bg-black'></div>
+          <div className='absolute top-0 left-0 -z-10 flex h-[95vh] w-screen flex-col bg-black'>
+            <Image
+              src='/banner.jpg'
+              alt='Thw witcher'
+              fill={true}
+              className='h-[65vh] object-cover object-left-top lg:h-[95vh]'
+            />
+          </div>
 
           <h1 className='text-2xl font-bold md:text-4xl lg:text-7xl'>
             The Witcher
@@ -17,9 +24,14 @@ export default function Home() {
           </p>
         </div>
 
-        <button className='w-24 rounded-full bg-white px-4 py-2 font-bold text-black md:w-32 lg:w-40'>
-          Play
-        </button>
+        <div className='flex space-x-3'>
+          <button className='flex cursor-pointer items-center gap-x-2 rounded bg-white px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-75 md:px-8 md:py-2.5 md:text-xl'>
+            Play
+          </button>
+          <button className='flex cursor-pointer items-center gap-x-2 rounded bg-gray-600 px-5 py-1.5 text-sm font-semibold text-white transition hover:opacity-75 md:px-8 md:py-2.5 md:text-xl'>
+            More info
+          </button>
+        </div>
       </main>
     </div>
   );
