@@ -40,6 +40,24 @@ export default function Home() {
             More info
           </button>
         </div>
+
+        <div className='flex-col space-y-4'>
+          <div className='scrollbar-hide flex space-x-4 overflow-x-scroll'>
+            {[1, 3, 1, 2, 3, 2, 1].map((index) => (
+              <div
+                key={index}
+                className='group scrollbar-hide relative h-28 min-w-[200px] transform transition duration-200 ease-in hover:scale-110'
+              >
+                <Image
+                  src={`/item_${index}.png`}
+                  fill={true}
+                  alt='item'
+                  className='rounded'
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </main>
     </div>
   );
