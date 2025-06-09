@@ -1,5 +1,6 @@
 import React from 'react';
 import { getUserInfo } from '../../lib/settings';
+import BuggyButton from '@/app/components/BuggyButton';
 
 async function User() {
   const { name, email, age } = await getUserInfo();
@@ -12,6 +13,10 @@ async function User() {
         <p>Name: {name}</p>
         <p>Email: {email}</p>
         <p>Age: {age}</p>
+      </div>
+
+      <div className='mt-4'>
+        <BuggyButton />
       </div>
     </div>
   );
