@@ -18,5 +18,6 @@ describe('useScroll', () => {
     });
 
     expect(result.current).toBe(false);
+
   });
 });
